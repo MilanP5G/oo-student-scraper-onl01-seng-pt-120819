@@ -15,7 +15,7 @@ class Scraper
         profile_url = project.css("a").attribute("href").value
         student_profiles = {
           :name => name,
-          :location => location 
+          :location => location,
           :profile_url => profile_url
         }
         profiles << student_profiles
