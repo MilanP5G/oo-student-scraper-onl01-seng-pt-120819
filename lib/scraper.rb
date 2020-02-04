@@ -13,7 +13,11 @@ class Scraper
         name = project.css(".student-name").text,
         location = project.css(".student-location").text,
         profile_url = project.css("a").attribute("href").value
-      
+        student_profiles = {
+          :name => name,
+          :location => location 
+          :profile_url => profile_url
+        }
     end 
     profiles
   end
