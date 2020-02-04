@@ -7,9 +7,9 @@ class Scraper
   def self.scrape_index_page(index_url)
     page = Nokogiri::HTML(open(index_url))
     
-    profiles = {} 
+    profiles = [] 
     
-    index_url.css(".roster-body-wrapper"). each do | project |
+    page.css(".roster-body-wrapper"). each do | project |
       title = project.css(".roster-cards-container").text 
       profiles[title.to_sym] = {
         :name => project.css(".student-name").text,
