@@ -28,7 +28,7 @@ class Scraper
     
     profile_pages = {}
     
-    social = page.css(".social-icon-container").collect { | icon | icon.attribute("href").value }
+    social = page.css(".social-icon-container a").collect { | icon | icon.attribute("href").value }
     social.each do | link | 
     if link.include?("twitter")
         profile_pages[:twitter] = link
