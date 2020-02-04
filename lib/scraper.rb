@@ -14,7 +14,7 @@ class Scraper
       profiles[title.to_sym] = {
         :name => project.css(".student-name").text,
         :location => project.css(".student-location").text,
-        :profile_url => project.css(".main-wrapper-profile").text
+        :profile_url => project.css("a").attribute
       }
     end 
     profiles
