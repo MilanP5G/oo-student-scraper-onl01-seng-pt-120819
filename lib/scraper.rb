@@ -9,11 +9,11 @@ class Scraper
     
     profiles = [] 
     
-    page.css(".roster-body-wrapper"). each do | project |
+    page.css(".student-card"). each do | project |
         name = project.css(".student-name").text,
         location = project.css(".student-location").text,
         profile_url = project.css("a").attribute("href").value
-      }
+      
     end 
     profiles
   end
