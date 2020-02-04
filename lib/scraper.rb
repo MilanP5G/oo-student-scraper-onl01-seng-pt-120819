@@ -9,10 +9,10 @@ class Scraper
     
     profiles = [] 
     
-    page.css(".student-card"). each do | project |
-        name = project.css(".student-name").text,
-        location = project.css(".student-location").text,
-        profile_url = project.css("a").attribute("href").value
+    page.css(".student-card"). each do | profile |
+        name = profile.css(".student-name").text,
+        location = profile.css(".student-location").text,
+        profile_url = profile.css("a").attribute("href").value
         student_profiles = {
           :name => name,
           :location => location,
