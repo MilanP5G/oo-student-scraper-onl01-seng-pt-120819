@@ -10,8 +10,8 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students_array.collect { | k, v | self.send
-    self.all << self.new_from_filename(students_array)
+    students students_array.collect { | key, value | ("#{key}=", value) }
+    self.all << students
   end
 
   def add_student_attributes(attributes_hash)
