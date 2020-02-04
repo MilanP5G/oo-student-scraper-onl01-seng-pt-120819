@@ -10,8 +10,6 @@ class Scraper
     profiles = [] 
     
     page.css(".roster-body-wrapper"). each do | project |
-      title = project.css(".roster-cards-container").text 
-      profiles[title.to_sym] = {
         name = project.css(".student-name").text,
         location = project.css(".student-location").text,
         profile_url = project.css("a").attribute("href").value
