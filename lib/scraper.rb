@@ -28,7 +28,9 @@ class Scraper
     
     profile_pages = {}
     
-    page.css(".social_icon_container").collect do | icon | icon.attribute
+    page.css(".social_icon_container").collect { | icon | icon.attribute("href").value | }
+    
+      
     
   end
 
