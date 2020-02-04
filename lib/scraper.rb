@@ -20,6 +20,7 @@ class Scraper
         }
     end
     profiles << student_profiles
+   end 
     profiles
   end
 
