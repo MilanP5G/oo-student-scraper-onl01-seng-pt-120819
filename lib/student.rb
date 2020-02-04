@@ -10,6 +10,7 @@ class Student
   end
 
   def self.create_from_collection(students_array)
+    students_array.collect { | k, v | self.send
     self.all << self.new_from_filename(students_array)
   end
 
