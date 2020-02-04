@@ -10,8 +10,8 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students = students_array.collect { | name, location | self.send("#{name}=", location) }
-    @all << self 
+    students = students_array.collect { | name, location |  }
+    
   end
 
   def add_student_attributes(attributes_hash)
