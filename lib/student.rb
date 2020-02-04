@@ -10,7 +10,7 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students students_array.collect { | key, value | ("#{key}=", value) }
+    students = students_array.collect { | key, value | ("#{key}=", value) }
     self.all << students
   end
 
