@@ -31,13 +31,14 @@ class Scraper
     page.css(".social_icon_container").collect { | icon | icon.attribute("href").value | }
     social.each | link | do  
     if link.include?("twitter")
-        students[:twitter] = link
+        profile_pages[:twitter] = link
       elsif link.include?("linkedin")
-      students[:linkedin] = link
+        profile_pages[:linkedin] = link
       elsif link.include?("github")
-        students[:github]= link
+        profile_pages[:github]= link
       elsif link.include?(".com")
-        students[:blog] = link
+        profile_pages[:blog] = link
+      end 
       
     
   end
