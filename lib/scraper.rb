@@ -18,8 +18,8 @@ class Scraper
           :location => location 
           :profile_url => profile_url
         }
+        profiles << student_profiles
     end
-    profiles << student_profiles
    end 
     profiles
   end
